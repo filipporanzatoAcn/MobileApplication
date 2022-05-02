@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/test/Services/notificationCreator.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/test/Actions/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/test/Actions/Service/CloseOfflineFailureMessage.action"
+}

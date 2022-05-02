@@ -1,0 +1,9 @@
+{
+    "Service": "/notificationCreator/Services/notificationCreation.service",
+    "DefiningRequests": [],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/notificationCreator/Actions/Service/SyncFailureMessage.action"
+}

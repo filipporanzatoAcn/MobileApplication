@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"PageToOpen": "/notificationCreator/Pages/NotificationCreator.page",
+	"ClearHistory": true,
+	"OuterNavigation": true,
+	"ModalPage": true,
+	"NavigationType": "Inner"
+}

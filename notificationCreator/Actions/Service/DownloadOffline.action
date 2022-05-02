@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/notificationCreator/Actions/Service/SyncFailureMessage.action",
+	"Service": "/notificationCreator/Services/notificationCreator.service",
+	"DefiningRequests": [
+		{
+			"Name": "CatalogSet",
+			"Query": "CatalogSet",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "EquiSearchHelpSet",
+			"Query": "EquiSearchHelpSet",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "NotifTypeCustSet",
+			"Query": "NotifTypeCustSet",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

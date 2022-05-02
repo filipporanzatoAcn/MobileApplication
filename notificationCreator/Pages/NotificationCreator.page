@@ -1,0 +1,258 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker1",
+							"IsEditable": true,
+							"IsVisible": true,
+							"AllowMultipleSelection": false,
+							"Caption": "Equipment",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "",
+								"PageSize": 50
+							},
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/notificationCreator/Services/notificationCreator.service",
+									"EntitySet": "EquiSearchHelpSet",
+									"QueryOptions": ""
+								},
+								"DisplayValue": "{Equnr} - {Eqktx}",
+								"ReturnValue": ""
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty1",
+							"IsEditable": false,
+							"IsVisible": true,
+							"Caption": "Caption"
+						}
+					],
+					"Caption": "Equipment",
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty2",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Description"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty3",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Details",
+							"PlaceHolder": "Enter text..."
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker0",
+							"IsEditable": true,
+							"AllowMultipleSelection": false,
+							"Caption": "Type",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "",
+								"PageSize": 50
+							},
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/notificationCreator/Services/notificationCreator.service",
+									"EntitySet": "NotifTypeCustSet",
+									"QueryOptions": ""
+								},
+								"DisplayValue": "{NotifType} - {NotifTypeT}",
+								"ReturnValue": "{NotifTypeT}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker2",
+							"IsEditable": true,
+							"AllowMultipleSelection": false,
+							"Caption": "Damage",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/notificationCreator/Services/notificationCreator.service",
+									"EntitySet": "CatalogSet",
+									"QueryOptions": "$filter=Catalogtype eq 'C'&$select=Catalogid,Catalogtype,Code,CodeDescr"
+								},
+								"DisplayValue": "{Catalogid} - {Code} - {CodeDescr}",
+								"ReturnValue": ""
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty4",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Damage description",
+							"PlaceHolder": "Enter text..."
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker3",
+							"IsEditable": true,
+							"AllowMultipleSelection": false,
+							"Caption": "Cause",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/notificationCreator/Services/notificationCreator.service",
+									"EntitySet": "CatalogSet",
+									"QueryOptions": "$filter=Catalogtype eq '5'&$select=Catalogid,Catalogtype,Code,CodeDescr"
+								},
+								"DisplayValue": "{Catalogid} - {Code} - {CodeDescr}",
+								"ReturnValue": ""
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty5",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Cause description",
+							"PlaceHolder": "Enter text..."
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker4",
+							"IsEditable": true,
+							"IsVisible": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Priority",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"PickerItems": [
+								{
+									"DisplayValue": "Low",
+									"ReturnValue": "Low"
+								},
+								{
+									"DisplayValue": "Medium",
+									"ReturnValue": "Medium"
+								},
+								{
+									"DisplayValue": "Hight",
+									"ReturnValue": "Hight"
+								},
+								{
+									"DisplayValue": "Very Hight",
+									"ReturnValue": "Very Hight"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty6",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Reported By",
+							"PlaceHolder": "Enter text..."
+						},
+						{
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "FormCellDatePicker0",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Reported On",
+							"Mode": "Date"
+						}
+					],
+					"Caption": "Problem",
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"Value": false,
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "FormCellSwitch1",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Breakdown",
+							"OnValueChange": "/notificationCreator/Rules/Breakdown.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "FormCellDatePicker3",
+							"IsEditable": false,
+							"IsVisible": true,
+							"Caption": "Malfunction Start",
+							"Mode": "Date"
+						},
+						{
+							"_Type": "Control.Type.FormCell.DatePicker",
+							"_Name": "FormCellDatePicker4",
+							"IsEditable": false,
+							"IsVisible": true,
+							"Caption": "Malfunction End",
+							"Mode": "Date"
+						}
+					],
+					"Caption": "Breakdown",
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "noticationCreator",
+	"Caption": "noticationCreator",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"Icon": "sap-icon://nav-back",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/notificationCreator/Actions/ClosePage.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

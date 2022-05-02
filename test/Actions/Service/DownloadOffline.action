@@ -1,0 +1,12 @@
+{
+    "Service": "/test/Services/notificationCreator.service",
+    "DefiningRequests": [{
+        "Name": "NotifTypeCustSet",
+        "Query": "NotifTypeCustSet"
+    }],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/test/Actions/Service/SyncFailureMessage.action"
+}

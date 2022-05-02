@@ -1,0 +1,90 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer0",
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty0",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Equipment"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty1",
+							"IsEditable": false,
+							"IsVisible": true,
+							"Caption": "Caption"
+						}
+					],
+					"Caption": "Equipment",
+					"Visible": true
+				},
+				{
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty2",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Description"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty3",
+							"IsEditable": true,
+							"IsVisible": true,
+							"Caption": "Details"
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker0",
+							"IsEditable": true,
+							"IsVisible": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Type",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "",
+								"PageSize": 50
+							},
+							"PickerPrompt": "Please select one single item",
+							"IsSelectedSectionEnabled": false,
+							"AllowDefaultValueIfOneItem": false,
+							"Search": {
+								"Placeholder": "search...",
+								"Delay": 100
+							},
+							"PickerItems": {
+								"Target": {
+									"Service": "/notificationCreator/Services/notificationCreation.service",
+									"EntitySet": "NotifTypeCustSet"
+								},
+								"ObjectCell": {
+									"DetailImageIsCircular": false,
+									"Icons": [
+									],
+									"PreserveIconStackSpacing": true,
+									"Styles": {
+									}
+								},
+								"ReturnValue": ""
+							}
+						}
+					],
+					"Caption": "Problem",
+					"Visible": true
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "noticationCreator",
+	"Caption": "noticationCreator",
+	"PrefersLargeCaption": true
+}

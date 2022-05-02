@@ -1,0 +1,58 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"_Name": "SectionButton0",
+							"Title": "NotificationCreator",
+							"TextAlignment": "center",
+							"OnPress": "/notificationCreator/Actions/notificationCreator/NavToNotificationCreator.action"
+						},
+						{
+							"_Name": "SectionButton1",
+							"Title": "NotifTypeList",
+							"TextAlignment": "center",
+							"Visible": true,
+							"OnPress": "/notificationCreator/Actions/notificationCreator/NavToNotifTypeList.action"
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"Caption": "Main",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
+				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/notificationCreator/Actions/Logout.action"
+			},
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "UploadToolbarItem",
+				"Caption": "Sync",
+				"Enabled": true,
+				"Visible": "$(PLT,true,true,false)",
+				"Clickable": true,
+				"OnPress": "/notificationCreator/Actions/Service/SyncStartedMessage.action"
+			}
+		]
+	},
+	"PrefersLargeCaption": true
+}

@@ -1,0 +1,12 @@
+{
+    "Service": "/notificationCreator/Services/notificationCreator.service",
+    "DefiningRequests": [],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/notificationCreator/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/notificationCreator/Actions/Service/InitializeOfflineFailureMessage.action"
+}

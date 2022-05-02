@@ -1,0 +1,6 @@
+{
+	"DestinationName": "notificationCreator",
+	"OfflineEnabled": true,
+	"SourceType": "Mobile",
+	"RestService": false
+}

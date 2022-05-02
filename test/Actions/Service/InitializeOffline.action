@@ -1,0 +1,15 @@
+{
+    "Service": "/test/Services/notificationCreator.service",
+    "DefiningRequests": [{
+        "Name": "NotifTypeCustSet",
+        "Query": "NotifTypeCustSet"
+    }],
+    "_Type": "Action.Type.ODataService.Initialize",
+    "ShowActivityIndicator": true,
+    "ActivityIndicatorText": "Downloading...",
+    "ActionResult": {
+        "_Name": "init"
+    },
+    "OnSuccess": "/test/Actions/Service/InitializeOfflineSuccessMessage.action",
+    "OnFailure": "/test/Actions/Service/InitializeOfflineFailureMessage.action"
+}

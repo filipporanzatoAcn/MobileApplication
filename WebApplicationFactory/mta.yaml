@@ -1,0 +1,74 @@
+_schema-version: "3.2"
+ID: nsnotificationCreator
+version: 0.0.1
+modules:
+- name: nsnotificationCreator-approuter
+  type: approuter.nodejs
+  path: nsnotificationCreator-approuter
+  requires:
+  - name: nsnotificationCreator_html_repo_runtime
+  - name: dest_nsnotificationCreator
+  - name: conn_nsnotificationCreator
+  - name: uaa_nsnotificationCreator
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+  properties:
+    SEND_XFRAMEOPTIONS: false
+    SAP_ROUTER_VERSION: 10
+- name: nsnotificationCreator_ui_deployer
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: nsnotificationCreator_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - MDKModule-content.zip
+      name: MDKModule
+      target-path: resources/
+- name: MDKModule
+  type: html5
+  path: MDKModule
+  build-parameters:
+    builder: custom
+    commands:
+    - npm run build
+    supported-platforms: []
+resources:
+- name: nsnotificationCreator_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+- name: nsnotificationCreator_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: dest_nsnotificationCreator
+  type: org.cloudfoundry.managed-service
+  parameters:    
+    service: destination
+    service-plan: lite
+- name: conn_nsnotificationCreator
+  type: org.cloudfoundry.managed-service
+  parameters:    
+    service: connectivity
+    service-plan: lite
+- name: uaa_nsnotificationCreator
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: nsnotificationCreator-xsuaa-service
+    service-plan: application
+
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm install
