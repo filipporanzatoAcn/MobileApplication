@@ -253,6 +253,6 @@
 				"OnPress": "/notificationCreator/Actions/ClosePage.action"
 			}
 		],
-		"_Name": "ActionBar1"
+		"_Name": "ActionBar12"
 	}
-}
+}       
